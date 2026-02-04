@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ChronoClip
+
+> Your personal knowledge base for YouTube content.
+
+ChronoClip is a video bookmark manager that goes beyond simple playlists. It allows you to save YouTube videos, bookmark specific timestamps ("Clips"), add contextual notes, and organize your learning with tags. Perfect for researchers, students, and anyone who uses YouTube for education.
+
+## Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Database:** Drizzle ORM (PostgreSQL/SQLite)
+- **Styling:** Tailwind CSS & shadcn/ui
+- **Video:** YouTube IFrame API
+
+## Features
+
+- **Precise Clipping:** Bookmark specific seconds in a video with one click.
+- **Contextual Notes:** Add thoughts and summaries to every timestamp.
+- **Tagging:** Organize clips by topic.
+- **Instant Seek:** Click any saved clip to jump the player to that exact moment.
+- **Library Management:** A clean dashboard for all your saved content.
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository**
+   ```bash
+   git clone <repo-url>
+   cd chronoclip
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Setup Environment**
+   Copy `.env.example` to `.env` and add your database credentials.
+   ```bash
+   cp .env.example .env
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. **Run Database Migrations**
+   ```bash
+   npx drizzle-kit push
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+## Documentation
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [TASKLIST.md](./TASKLIST.md) - Project roadmap and status.
+- [LEARNINGS.md](./LEARNINGS.md) - Technical insights and decisions.
+- [.dev0/RULES.md](./.dev0/RULES.md) - AI coding guidelines.
